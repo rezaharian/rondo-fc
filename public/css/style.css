@@ -1,0 +1,188 @@
+
+/* === COLOR PALETTE === */
+:root {
+    --primary-core: #002147;           /* Biru navy - Warna utama PSG */
+    --primary-dark: #00112c;      /* Biru navy lebih gelap */
+    --primary-light: #002147;     /* Background abu-abu terang */
+
+    --secondary: #DA291C;         /* Merah terang PSG */
+    --secondary-dark: #b71f14;
+    --secondary-light: #fde8e6;
+
+    --transparent-soft: rgba(0, 33, 71, 0.1); /* Biru navy transparan */
+    --white: #ffffff;
+    --gray: #dee2e6;
+}
+
+/* === FONT & BODY === */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-light);
+    color: #212529;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Layer gambar background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://upload.wikimedia.org/wikipedia/id/c/ca/Paris_Saint-Germain_F.CC..svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+/* Layer hitam transparan */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00112ceb; /* hitam transparan */
+    z-index: -1;
+}
+
+
+
+/* === TEXT COLORS === */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-dark {
+    color: #212529 !important;
+}
+
+.text-light {
+    color: #f9fafb !important;
+}
+
+/* === BACKGROUND COLORS === */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-primary-dark {
+    background-color: var(--primary-dark) !important;
+}
+
+.bg-primary-light {
+    background-color: var(--primary-light) !important;
+}
+
+.bg-white {
+    background-color: var(--white) !important;
+}
+
+.bg-gray {
+    background-color: var(--gray) !important;
+}
+
+/* === BORDER COLORS === */
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.border-secondary {
+    border-color: var(--secondary) !important;
+}
+
+.border-gray {
+    border-color: var(--gray) !important;
+}
+
+/* === BUTTON STYLE === */
+.btn-primary {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* Tambahan Button Secondary */
+.btn-secondary {
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-dark);
+    border-color: var(--secondary-dark);
+}
+
+/* === LINKS === */
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-dark);
+}
+
+/* === CARD === */
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--gray);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* === BADGES === */
+.badge-primary {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+}
+
+.badge-secondary {
+    background-color: var(--secondary);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+}
+
+/* === OPTIONAL UTILITY === */
+.rounded {
+    border-radius: 8px !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
